@@ -21,7 +21,7 @@ import (
 	"log"
 	"net/http"
 
-	oidc "github.com/coreos/go-oidc"
+	oidc "github.com/coreos/go-oidc/v3/oidc"
 	"github.com/gorilla/sessions"
 	"golang.org/x/oauth2"
 )
@@ -33,9 +33,9 @@ const (
 )
 
 var (
-	clientID = "<CLIENT_ID>"
+	clientID = "p7g8em34hy5hln0wtxlvxhnslewbt4"
 	// Consider storing the secret in an environment variable or a dedicated storage system.
-	clientSecret = "<CLIENT_SECRET>"
+	clientSecret = "018rghwioa10ne040ol5gxntgauv36"
 	scopes       = []string{oidc.ScopeOpenID}
 	claims       = oauth2.SetAuthURLParam("claims", `{"id_token":{"email":null}}`)
 	redirectURL  = "http://localhost:7001/redirect"

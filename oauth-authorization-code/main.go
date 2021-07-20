@@ -33,9 +33,9 @@ const (
 )
 
 var (
-	clientID = "<CLIENT_ID>"
+	clientID = "p7g8em34hy5hln0wtxlvxhnslewbt4"
 	// Consider storing the secret in an environment variable or a dedicated storage system.
-	clientSecret = "<CLIENT_SECRET>"
+	clientSecret = "018rghwioa10ne040ol5gxntgauv36"
 	scopes       = []string{"user:read:email"}
 	redirectURL  = "http://localhost:7001/redirect"
 	oauth2Config *oauth2.Config
@@ -100,7 +100,7 @@ func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) (err error) {
 	case state == "", len(stateChallenge) < 1:
 		err = errors.New("missing state challenge")
 	case state != stateChallenge[0]:
-		err = fmt.Errorf("invalid oauth state, expected '%s', got '%s'\n", state, stateChallenge[0])
+		err = fmt.Errorf("invalid oauth state, expected '%s', got '%s'", state, stateChallenge[0])
 	}
 
 	if err != nil {

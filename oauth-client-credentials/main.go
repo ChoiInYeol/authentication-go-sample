@@ -21,9 +21,9 @@ import (
 )
 
 var (
-	clientID = "<CLIENT_ID>"
+	clientID = "p7g8em34hy5hln0wtxlvxhnslewbt4"
 	// Consider storing the secret in an environment variable or a dedicated storage system.
-	clientSecret = "<CLIENT_SECRET>"
+	clientSecret = "018rghwioa10ne040ol5gxntgauv36"
 	oauth2Config *clientcredentials.Config
 )
 
